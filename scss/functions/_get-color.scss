@@ -14,9 +14,10 @@
       @return map.get($color-map, $level);
     } @else {
       @warn "invalid (Level) not found : `#{$level}` in (type): `#{$type}`";
+      @return null;
     }
   } @else {
     @warn "invalid (type) not found: `#{$type}` ";
+    @return null;
   }
-  @return null;
 }
